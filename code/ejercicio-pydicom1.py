@@ -355,3 +355,7 @@ procesada=dicom.dcmread("/home/jesusr/Cursos_Deep_Learning/Curso_PyDICOM/imgs/IM
 
 print(procesada)
 # %%
+print(dir(dc.file_meta))
+# %%
+print(dc.file_meta.dir())
+# %%
