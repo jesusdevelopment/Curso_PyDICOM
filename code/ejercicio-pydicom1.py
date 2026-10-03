@@ -13,7 +13,7 @@ from pydicom.tag import TupleTag
 from pydicom.dataset import Dataset
 
 
-path="/home/jesusr/Cursos_Deep_Learning/Curso_PyDICOM/imgs/I720"
+path="/home/jesusromero/Cursos_Deep_Learning/Curso_PyDICOM/imgs/I720"
 dc= dicom.dcmread(path)
 print("="*40)
 print("dataset:")
