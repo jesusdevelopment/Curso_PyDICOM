@@ -65,7 +65,7 @@ def plot_dicom_with_mask(
 
   # Crear máscara RGBA con canal rojo activo
   mask_rgba = np.zeros((mask.shape[0], mask.shape[1], 4), dtype=np.float32)
-  mask_rgba[..., 0] = 1.0  # Canal Rojo
+  mask_rgba[..., 2] = 1.0  # Canal Rojo
   mask_rgba[..., 3] = np.where(mask > 0, alpha, 0.0)  # Canal Alfa (Transparencia)
 
   fig, ax = plt.subplots(figsize=(7, 7))
@@ -81,14 +81,14 @@ def plot_dicom_with_mask(
 # ==============================================================================
 if __name__ == "__main__":
   # 1. Cargar el volumen tomográfico en memoria
-  dicom_folder = "/home/jesusr/imgs/S2010"
+  dicom_folder = "/home/jesusromero/imgs/S2010"
   volume_3d = load_sorted_ct_series(dicom_folder)
 
   # 2. Generar la máscara booleana (Tejido hiperdenso / Hueso > 250 HU)
   mask = volume_3d > 250.0
 
   # 3. Visualizar el corte seleccionado con la máscara superpuesta
-  slice_idx = 20
+  slice_idx = 40
   plot_dicom_with_mask(
       image_hu=volume_3d[slice_idx],
       mask=mask[slice_idx],

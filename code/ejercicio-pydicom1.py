@@ -339,7 +339,7 @@ import pydicom
 from pydicom.uid import JPEG2000Lossless, RLELossless
 
 # 1. Cargar archivo no comprimido
-dc = pydicom.dcmread("/home/jesusr/Cursos_Deep_Learning/Curso_PyDICOM/imgs/I720")
+dc = pydicom.dcmread("/home/jesusromero/Cursos_Deep_Learning/Curso_PyDICOM/imgs/I720")
 print("Sintaxis inicial:", dc.file_meta.TransferSyntaxUID.name)
 
 # 2. Comprimir directamente a JPEG 2000 Lossless
@@ -350,12 +350,8 @@ print("Sintaxis comprimida:", dc.file_meta.TransferSyntaxUID.name)
 # 3. Guardar el archivo comprimido
 dc.save_as("estudio_j2k.dcm")
 # %%
-cruda=dicom.dcmread("/home/jesusr/Cursos_Deep_Learning/Curso_PyDICOM/imgs/IMG-0002-00069.dcm")
-procesada=dicom.dcmread("/home/jesusr/Cursos_Deep_Learning/Curso_PyDICOM/imgs/IMG-0002-00069 (2).dcm")
+cruda=dicom.dcmread("/home/jesusromero/Cursos_Deep_Learning/Curso_PyDICOM/imgs/IMG-0002-00069.dcm")
+procesada=dicom.dcmread("/home/jesusromero/Cursos_Deep_Learning/Curso_PyDICOM/imgs/IMG-0002-00069 (2).dcm")
 
 print(procesada)
-# %%
-print(dir(dc.file_meta))
-# %%
-print(dc.file_meta.dir())
 # %%
