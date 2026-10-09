@@ -25,6 +25,6 @@ def normalize_visualize_dicom_2(dcm_file, max_v=None, min_v=None, show=True):
         pillow_image.show()
 
     return uint8_image
-
-# Llamada a la función (celda inferior en la captura)
-image_2 = normalize_visualize_dicom_2('/home/jesusr/Cursos_Deep_Learning/Curso_PyDICOM/imgs/I720', show=True, max_v=0, min_v=-0)
+if __name__ == "__main__":
+        # Llamada a la función (celda inferior en la captura)
+    image_2 = normalize_visualize_dicom_2('/home/jesusr/Cursos_Deep_Learning/Curso_PyDICOM/imgs/I720', show=True, max_v=0, min_v=-0)

@@ -81,7 +81,7 @@ def plot_dicom_with_mask(
 # ==============================================================================
 if __name__ == "__main__":
   # 1. Cargar el volumen tomográfico en memoria
-  dicom_folder = "/home/jesusromero/imgs/S2010"
+  dicom_folder = "/home/jesusr/imgs/S2010"
   volume_3d = load_sorted_ct_series(dicom_folder)
 
   # 2. Generar la máscara booleana (Tejido hiperdenso / Hueso > 250 HU)
